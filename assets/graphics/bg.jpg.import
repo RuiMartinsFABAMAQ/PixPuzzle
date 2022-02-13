@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logotipo_FMQ_26072017.png-8955d00492bc423b0ee487ac77979719.stex"
+path="res://.import/bg.jpg-06512f591299fd04168e4ab326f2f287.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://logotipo_FMQ_26072017.png"
-dest_files=[ "res://.import/logotipo_FMQ_26072017.png-8955d00492bc423b0ee487ac77979719.stex" ]
+source_file="res://assets/graphics/bg.jpg"
+dest_files=[ "res://.import/bg.jpg-06512f591299fd04168e4ab326f2f287.stex" ]
 
 [params]
 
