@@ -1,8 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://logotipo_FMQ_26072017.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/logo.png" type="Texture" id=1]
 
 [node name="main_title" type="Sprite"]
-scale = Vector2( 0.103166, 0.102817 )
 texture = ExtResource( 1 )
 centered = false
