@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 48 )
 
-[node name="Emptycell" type="Node2D" groups=["emptycells"]]
+[node name="Emptycell" type="Node2D"]
 
 [node name="colors" type="Node2D" parent="."]
 position = Vector2( -48, -48 )

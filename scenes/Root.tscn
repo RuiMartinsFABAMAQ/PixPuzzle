@@ -68,7 +68,55 @@ position = Vector2( 1050, 650 )
 [node name="Cells_pic" type="Node2D" parent="."]
 
 [node name="cell" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
-position = Vector2( 457, 450 )
+position = Vector2( 264, 464 )
+
+[node name="cell2" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 1439, 450 )
+
+[node name="Sprite" parent="Cells_pic/cell2" index="2"]
+region_rect = Rect2( 100, 0, 100, 100 )
+
+[node name="cell3" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 568, 650 )
+
+[node name="Sprite" parent="Cells_pic/cell3" index="2"]
+region_rect = Rect2( 200, 0, 100, 100 )
+
+[node name="cell4" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 1450, 660 )
+
+[node name="Sprite" parent="Cells_pic/cell4" index="2"]
+region_rect = Rect2( 0, 100, 100, 100 )
+
+[node name="cell5" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 333, 650 )
+
+[node name="Sprite" parent="Cells_pic/cell5" index="2"]
+region_rect = Rect2( 100, 100, 100, 100 )
+
+[node name="cell6" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 1246, 438 )
+
+[node name="Sprite" parent="Cells_pic/cell6" index="2"]
+region_rect = Rect2( 200, 100, 100, 100 )
+
+[node name="cell7" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 1653, 610 )
+
+[node name="Sprite" parent="Cells_pic/cell7" index="2"]
+region_rect = Rect2( 0, 200, 100, 100 )
+
+[node name="cell8" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 1246, 610 )
+
+[node name="Sprite" parent="Cells_pic/cell8" index="2"]
+region_rect = Rect2( 100, 200, 100, 100 )
+
+[node name="cell9" parent="Cells_pic" groups=["cells"] instance=ExtResource( 6 )]
+position = Vector2( 568, 450 )
+
+[node name="Sprite" parent="Cells_pic/cell9" index="2"]
+region_rect = Rect2( 200, 200, 100, 100 )
 
 [node name="Level" type="Label" parent="."]
 margin_left = 750.0
@@ -97,3 +145,12 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
+
+[editable path="Cells_pic/cell2"]
+[editable path="Cells_pic/cell3"]
+[editable path="Cells_pic/cell4"]
+[editable path="Cells_pic/cell5"]
+[editable path="Cells_pic/cell6"]
+[editable path="Cells_pic/cell7"]
+[editable path="Cells_pic/cell8"]
+[editable path="Cells_pic/cell9"]
