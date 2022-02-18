@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2p.png-a4508da368366207a1586b67fbb8d999.stex"
+path="res://.import/Bruno.png-bb1862c4941363a01e1310cf18cf271f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/2p.png"
-dest_files=[ "res://.import/2p.png-a4508da368366207a1586b67fbb8d999.stex" ]
+source_file="res://assets/graphics/pictures/Bruno.png"
+dest_files=[ "res://.import/Bruno.png-bb1862c4941363a01e1310cf18cf271f.stex" ]
 
 [params]
 
