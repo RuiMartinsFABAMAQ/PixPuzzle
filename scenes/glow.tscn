@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/graphics/card_glow.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+uniform sampler2D n;
+uniform float intensity = 0.0f;
+uniform float speed = 1.0f;
+
+void fragment(){
+	vec4 tx = texture(TEXTURE, UV);
+	vec4 noise = texture(n, UV - TIME / (1f + speed));
+	COLOR.a = clamp(tx.r * noise.r * intensity, 0f, 1f);
+	COLOR.a = pow(COLOR.a, 2);
+}"
+
+[sub_resource type="OpenSimplexNoise" id=4]
+
+[sub_resource type="NoiseTexture" id=5]
+width = 64
+height = 64
+seamless = true
+noise = SubResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/intensity = 0.0
+shader_param/speed = 1.0
+shader_param/n = SubResource( 5 )
+
+[node name="glow" type="Sprite"]
+material = SubResource( 3 )
+position = Vector2( 8.16584e-06, -2.38419e-07 )
+scale = Vector2( 0.784091, 0.566372 )
+texture = ExtResource( 1 )

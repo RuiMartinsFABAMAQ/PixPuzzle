@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform sampler2D n;
+uniform float intensity = 0.0f;
+uniform float speed = 1.0f;
+
+void fragment(){
+	vec4 tx = texture(TEXTURE, UV);
+	vec4 noise = texture(n, UV - TIME / (1f + speed));
+	COLOR.a = clamp(tx.r * noise.r * intensity, 0f, 1f);
+	COLOR.a = pow(COLOR.a, 2);
+}"
+
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=3]
+width = 64
+height = 64
+seamless = true
+noise = SubResource( 2 )
+
+[resource]
+shader = SubResource( 1 )
+shader_param/intensity = 0.0
+shader_param/speed = 1.0
+shader_param/n = SubResource( 3 )

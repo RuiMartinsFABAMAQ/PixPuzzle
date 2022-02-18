@@ -1,0 +1,22 @@
+[gd_scene format=2]
+
+[node name="GridArea" type="Node2D"]
+
+[node name="foreground" type="Node2D" parent="."]
+position = Vector2( 150, 150 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="foreground"]
+position = Vector2( -149.915, -149.872 )
+scale = Vector2( 0.980986, 1.00803 )
+color = Color( 0, 0.286275, 0.294118, 1 )
+offset = Vector2( -0.124, 0 )
+antialiased = true
+polygon = PoolVector2Array( -15.876, -16, 320.124, -16, 320, 312, -16, 312 )
+
+[node name="Polygon2D" type="Polygon2D" parent="foreground"]
+position = Vector2( -135.609, -135.366 )
+scale = Vector2( 0.892528, 0.914634 )
+color = Color( 0, 0.905882, 1, 0.788235 )
+offset = Vector2( -0.124, 0 )
+antialiased = true
+polygon = PoolVector2Array( -15.876, -16, 320.124, -16, 320, 312, -16, 312 )
