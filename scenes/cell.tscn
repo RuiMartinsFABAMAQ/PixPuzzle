@@ -23,7 +23,7 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 50 )
 
-[node name="cell" type="Area2D"]
+[node name="cell" type="Area2D" groups=["cell"]]
 script = ExtResource( 2 )
 
 [node name="glow" parent="." instance=ExtResource( 3 )]
