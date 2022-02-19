@@ -4,21 +4,26 @@ onready var selected = false
 onready var anim = $AnimationPlayer
 onready var currentPiece = $"../..".currentPiece
 
-var grid_size = 100
-
 func _on_cell_mouse_entered():
-	selected = true
+	if Input.is_action_pressed("click"):
+		selected = false
+	else:
+		selected = true
+		z_index = 1
 	if selected:
 		anim.play("glow")
-	else:
-		anim.play_backwards("glow")
 
 func _on_cell_mouse_exited():
-	selected = false
-	anim.play_backwards("glow")
+	if selected == true:
+		selected = false
+		currentPiece = null
+		anim.play_backwards("glow")
+		z_index = 0
 
 func _on_cell_input_event(viewport, event, shape_idx):
-	if selected:
+	if Input.is_action_just_pressed("click"):
+		currentPiece = self
+	if selected and currentPiece == self:
 		if Input.is_action_pressed("click"): 
 			move_to_mouse()
 

@@ -33,36 +33,38 @@ position = Vector2( 750, 300 )
 position = Vector2( 785, 385 )
 scale = Vector2( 1.1, 1.1 )
 
-[node name="Empty_cells" type="Node2D" parent="."]
+[node name="Empty_cells" type="Node2D" parent="GridArea"]
+position = Vector2( -713.636, -350 )
+scale = Vector2( 0.909091, 0.909091 )
 
-[node name="Emptycell" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 850, 450 )
 
-[node name="Emptycell2" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell2" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 950, 450 )
 
-[node name="Emptycell3" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell3" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 1050, 450 )
 
-[node name="Emptycell4" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell4" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 850, 550 )
 
-[node name="Emptycell5" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell5" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 950, 550 )
 
-[node name="Emptycell6" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell6" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 1050, 550 )
 
-[node name="Emptycell7" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell7" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 850, 650 )
 
-[node name="Emptycell8" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell8" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 850, 650 )
 
-[node name="Emptycell9" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell9" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 950, 650 )
 
-[node name="Emptycell10" parent="Empty_cells" instance=ExtResource( 4 )]
+[node name="Emptycell10" parent="GridArea/Empty_cells" instance=ExtResource( 4 )]
 position = Vector2( 1050, 650 )
 
 [node name="Cells_pic" type="Node2D" parent="."]
