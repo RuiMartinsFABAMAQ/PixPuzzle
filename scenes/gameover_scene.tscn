@@ -40,6 +40,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "fade_out"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("overlay/ColorRect:color")
 tracks/0/interp = 1
@@ -47,7 +48,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]

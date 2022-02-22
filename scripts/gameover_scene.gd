@@ -9,5 +9,5 @@ func _on_exit_pressed():
 
 func _on_restart_pressed():
 	$easyin2.play("fade_in")
-	yield(get_tree().create_timer(1.2), "timeout")
+	yield(get_tree().create_timer(0.7), "timeout")
 	get_tree().change_scene("res://scenes/level1.tscn")
