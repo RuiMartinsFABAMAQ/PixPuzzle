@@ -7,7 +7,6 @@ func select():
 	modulate = Color.red
 	for child in get_tree().get_nodes_in_group("zone"):
 		child.deselect()
-		
 
 func deselect():
 	modulate = Color.white

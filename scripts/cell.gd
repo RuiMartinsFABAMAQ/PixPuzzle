@@ -8,6 +8,7 @@ onready var inZone = false
 
 var rest_point
 var rest_nodes = []
+var cells = []
 var drop = false
 
 func _ready():
@@ -16,6 +17,7 @@ func _ready():
 	shader_mat.set_shader_param("intensity", 0)
 	$glow.material = mat
 	rest_nodes = get_tree().get_nodes_in_group("zone")
+	cells = get_tree().get_nodes_in_group("cell")
 	rest_point = rest_nodes[0].position
 	rest_nodes[0].select()
 
@@ -39,6 +41,7 @@ func _on_cell_mouse_exited():
 func _on_cell_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
 		currentPiece = self
+		$bt_click.play()
 	if selected and currentPiece == self:
 		if Input.is_action_pressed("click"): 
 			moving = true

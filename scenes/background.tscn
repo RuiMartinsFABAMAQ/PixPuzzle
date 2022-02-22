@@ -8,17 +8,7 @@
 texture = ExtResource( 1 )
 centered = false
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_top = 234.0
-margin_right = 1920.0
-margin_bottom = 817.0
-color = Color( 0.835294, 0.101961, 0.101961, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2( 808, 128 )
+position = Vector2( 812, 128 )
 color = Color( 1, 1, 1, 0.490196 )
-polygon = PoolVector2Array( -812, 120, 1108, 120, 1108, 712, -812, 712 )
+polygon = PoolVector2Array( -812, 120, 1108, 120, 1108, 712, -812, 712, -812, 416 )

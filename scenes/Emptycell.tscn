@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/graphics/cell.png" type="Texture" id=1]
-[ext_resource path="res://scenes/Emptycell.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Emptycell.gd" type="Script" id=2]
 
 [node name="spot" type="Position2D" groups=["zone"]]
 script = ExtResource( 2 )
