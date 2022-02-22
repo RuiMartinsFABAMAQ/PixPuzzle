@@ -158,7 +158,7 @@ position = Vector2( 1050, 650 )
 
 [node name="Cells_pic" type="Node2D" parent="."]
 
-[node name="cell" parent="Cells_pic" instance=ExtResource( 6 )]
+[node name="cell1" parent="Cells_pic" instance=ExtResource( 6 )]
 position = Vector2( 264, 464 )
 
 [node name="cell2" parent="Cells_pic" instance=ExtResource( 6 )]
@@ -217,8 +217,8 @@ current = true
 anims/fade_in = SubResource( 4 )
 anims/fade_out = SubResource( 5 )
 
-[connection signal="area_shape_entered" from="dropzone" to="Cells_pic/cell" method="_on_dropzone_area_shape_entered"]
-[connection signal="area_shape_exited" from="dropzone" to="Cells_pic/cell" method="_on_dropzone_area_shape_exited"]
+[connection signal="area_shape_entered" from="dropzone" to="Cells_pic/cell1" method="_on_dropzone_area_shape_entered"]
+[connection signal="area_shape_exited" from="dropzone" to="Cells_pic/cell1" method="_on_dropzone_area_shape_exited"]
 
 [editable path="background/Time_bar"]
 [editable path="Cells_pic/cell2"]
