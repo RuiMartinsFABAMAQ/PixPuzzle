@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/Time_bar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/graphics/fonts/yoster-island.regular_2.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/backgrounds/background1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scripts/level1.gd" type="Script" id=5]
+[ext_resource path="res://scripts/levels/level1.gd" type="Script" id=5]
 [ext_resource path="res://scenes/cells/cell1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/Emptycell.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/GridArea.tscn" type="PackedScene" id=8]
@@ -76,6 +76,10 @@ scale = Vector2( 1.1, 1.1 )
 
 [node name="Time_bar" parent="background" instance=ExtResource( 2 )]
 position = Vector2( 750, 300 )
+
+[node name="TimeBar" parent="background/Time_bar" index="2"]
+default_color = Color( 0.752941, 0.956863, 0.392157, 1 )
+velocity = 6.7
 
 [node name="Ui" type="Control" parent="background"]
 margin_left = 750.0

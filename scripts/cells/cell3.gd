@@ -1,11 +1,8 @@
 extends Area2D
 
-signal level_up2
-
+signal level_up3
 onready var anim = $AnimationPlayer
-onready var currentPiece = $"../..".currentPiece
 export var group = "dragable"
-
 var _touch_position = Vector2.ZERO
 var _dragging = false
 var levelUP = false
@@ -74,12 +71,13 @@ func level_up_check():
 			if cells[2].position == drop_zone[2].position:
 				if cells[3].position == drop_zone[3].position:
 					if cells[4].position == drop_zone[4].position:
-						if cells[6].position == drop_zone[6].position:
-							if cells[7].position == drop_zone[7].position:
-								if cells[8].position == drop_zone[8].position:
-									levelUP = true
+						if cells[5].position == drop_zone[5].position:
+							if cells[6].position == drop_zone[6].position:
+								if cells[7].position == drop_zone[7].position:
+									if cells[8].position == drop_zone[8].position:
+										levelUP = true
 
 func _process(delta):
 	level_up_check()
 	if levelUP == true:
-		emit_signal("level_up2")
+		emit_signal("level_up3")

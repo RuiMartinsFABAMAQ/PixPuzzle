@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/graphics/gamers/bruno_ferreira.png" type="Texture" id=1]
-[ext_resource path="res://scripts/cells/cell.gd" type="Script" id=2]
-[ext_resource path="res://scenes/glow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/graphics/gamers/rui_moreira.png" type="Texture" id=1]
+[ext_resource path="res://scenes/glow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/cells/cell4.gd" type="Script" id=3]
 [ext_resource path="res://scenes/animations/glow.tres" type="Animation" id=4]
 [ext_resource path="res://assets/audio/bt_click.mp3" type="AudioStream" id=5]
 
@@ -25,9 +25,9 @@ tracks/0/keys = {
 extents = Vector2( 50, 50 )
 
 [node name="cell" type="Area2D" groups=["cell"]]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
-[node name="glow" parent="." instance=ExtResource( 3 )]
+[node name="glow" parent="." instance=ExtResource( 2 )]
 modulate = Color( 1, 0.678431, 0, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

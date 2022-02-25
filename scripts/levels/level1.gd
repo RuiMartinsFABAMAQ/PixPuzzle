@@ -2,9 +2,6 @@ extends Node2D
 
 onready var anim = $easyin
 
-var currentPiece = null
-var game_over = false
-
 func _unhandled_input(event):
 	if event.is_action_pressed("reset"):
 		get_tree().reload_current_scene()
@@ -23,5 +20,5 @@ func game_over_func():
 
 func level1():
 	anim.play("fade_in")
-#	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
 	get_tree().change_scene("res://scenes/level_ups/Levelup1.tscn")
