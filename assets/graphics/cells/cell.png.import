@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/card_glow.png-ed566e4b14b71d3b28daded5dc9dc43d.stex"
+path="res://.import/cell.png-191cdfc2578d7c7a50dfacd42b394527.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/card_glow.png"
-dest_files=[ "res://.import/card_glow.png-ed566e4b14b71d3b28daded5dc9dc43d.stex" ]
+source_file="res://assets/graphics/cells/cell.png"
+dest_files=[ "res://.import/cell.png-191cdfc2578d7c7a50dfacd42b394527.stex" ]
 
 [params]
 

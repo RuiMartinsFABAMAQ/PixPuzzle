@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-aa3c18d328e75a03a2a0092fc814c219.stex"
+path="res://.import/bruno_ferreira.png-ce1ea7e999f27e846d154f0209490134.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/bg.png"
-dest_files=[ "res://.import/bg.png-aa3c18d328e75a03a2a0092fc814c219.stex" ]
+source_file="res://assets/graphics/gamers/bruno_ferreira.png"
+dest_files=[ "res://.import/bruno_ferreira.png-ce1ea7e999f27e846d154f0209490134.stex" ]
 
 [params]
 

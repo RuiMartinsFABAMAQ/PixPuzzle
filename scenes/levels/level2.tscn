@@ -1,0 +1,495 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://scenes/header_title.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Time_bar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/graphics/fonts/yoster-island.regular_2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/backgrounds/background2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/level2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/cells/celllevel2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Emptycell.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/GridArea.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5.0 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "glow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../glow:material:shader_param/intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 5.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="level2" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="overlay" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="overlay"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="background" parent="." instance=ExtResource( 4 )]
+
+[node name="main_title" parent="background" instance=ExtResource( 1 )]
+position = Vector2( 959, 168 )
+centered = true
+
+[node name="GridArea" parent="background" instance=ExtResource( 8 )]
+position = Vector2( 785, 385 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="Time_bar" parent="background" instance=ExtResource( 2 )]
+position = Vector2( 750, 300 )
+
+[node name="Ui" type="Control" parent="background"]
+margin_left = 750.0
+margin_top = 850.0
+margin_right = 790.0
+margin_bottom = 890.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="Label" parent="background/Ui"]
+margin_right = 400.0
+margin_bottom = 90.0
+custom_colors/font_color_shadow = Color( 0, 0.980392, 1, 1 )
+custom_constants/shadow_offset_x = 5
+custom_fonts/font = SubResource( 1 )
+text = "LEVEL 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="background/Ui"]
+margin_left = 52.0
+margin_top = 176.0
+margin_right = 362.0
+margin_bottom = 197.0
+custom_colors/font_color_shadow = Color( 0, 0.980392, 1, 1 )
+custom_constants/shadow_offset_x = 1
+custom_fonts/font = SubResource( 2 )
+text = "press letter 'r' to restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empty_cells" type="Node2D" parent="."]
+
+[node name="Emptycell1" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 850, 450 )
+
+[node name="Emptycell2" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 950, 450 )
+
+[node name="Emptycell3" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 1050, 450 )
+
+[node name="Emptycell4" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 850, 550 )
+
+[node name="Emptycell5" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 950, 550 )
+
+[node name="Emptycell6" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 1050, 550 )
+
+[node name="Emptycell7" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 850, 650 )
+
+[node name="Emptycell8" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 950, 650 )
+
+[node name="Emptycell9" parent="Empty_cells" instance=ExtResource( 7 )]
+position = Vector2( 1050, 650 )
+
+[node name="Cells_pic" type="Node2D" parent="."]
+
+[node name="cell1" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 1363, 450 )
+
+[node name="cell2" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 1640, 450 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell2" index="1"]
+anims/RESET = SubResource( 6 )
+anims/glow = SubResource( 7 )
+
+[node name="Sprite" parent="Cells_pic/cell2" index="2"]
+region_rect = Rect2( 100, 0, 100, 100 )
+
+[node name="cell3" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 429, 650 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell3" index="1"]
+anims/RESET = SubResource( 8 )
+anims/glow = SubResource( 9 )
+
+[node name="Sprite" parent="Cells_pic/cell3" index="2"]
+region_rect = Rect2( 200, 0, 100, 100 )
+
+[node name="cell4" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 1472, 576 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell4" index="1"]
+anims/RESET = SubResource( 10 )
+anims/glow = SubResource( 11 )
+
+[node name="Sprite" parent="Cells_pic/cell4" index="2"]
+region_rect = Rect2( 0, 100, 100, 100 )
+
+[node name="cell5" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 578, 450 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell5" index="1"]
+anims/RESET = SubResource( 12 )
+anims/glow = SubResource( 13 )
+
+[node name="Sprite" parent="Cells_pic/cell5" index="2"]
+region_rect = Rect2( 100, 100, 100, 100 )
+
+[node name="cell6" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 1280, 690 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell6" index="1"]
+anims/RESET = SubResource( 14 )
+anims/glow = SubResource( 15 )
+
+[node name="Sprite" parent="Cells_pic/cell6" index="2"]
+region_rect = Rect2( 200, 100, 100, 100 )
+
+[node name="cell7" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 1667, 690 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell7" index="1"]
+anims/RESET = SubResource( 16 )
+anims/glow = SubResource( 17 )
+
+[node name="Sprite" parent="Cells_pic/cell7" index="2"]
+region_rect = Rect2( 0, 200, 100, 100 )
+
+[node name="cell8" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 379, 410 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell8" index="1"]
+anims/RESET = SubResource( 18 )
+anims/glow = SubResource( 19 )
+
+[node name="Sprite" parent="Cells_pic/cell8" index="2"]
+region_rect = Rect2( 100, 200, 100, 100 )
+
+[node name="cell9" parent="Cells_pic" instance=ExtResource( 6 )]
+position = Vector2( 167, 530 )
+
+[node name="AnimationPlayer" parent="Cells_pic/cell9" index="1"]
+anims/RESET = SubResource( 20 )
+anims/glow = SubResource( 21 )
+
+[node name="Sprite" parent="Cells_pic/cell9" index="2"]
+region_rect = Rect2( 200, 200, 100, 100 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="easyin" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 4 )
+anims/fade_out = SubResource( 5 )
+
+[editable path="background/Time_bar"]
+[editable path="Cells_pic/cell2"]
+[editable path="Cells_pic/cell3"]
+[editable path="Cells_pic/cell4"]
+[editable path="Cells_pic/cell5"]
+[editable path="Cells_pic/cell6"]
+[editable path="Cells_pic/cell7"]
+[editable path="Cells_pic/cell8"]
+[editable path="Cells_pic/cell9"]

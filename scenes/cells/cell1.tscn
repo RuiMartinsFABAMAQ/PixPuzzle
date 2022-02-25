@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/graphics/pictures/Bruno.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/gamers/bruno_ferreira.png" type="Texture" id=1]
 [ext_resource path="res://scripts/cell.gd" type="Script" id=2]
 [ext_resource path="res://scenes/glow.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/animations/glow.tres" type="Animation" id=4]
@@ -42,6 +42,9 @@ region_rect = Rect2( 0, 0, 100, 100 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [node name="bt_click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

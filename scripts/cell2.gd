@@ -1,6 +1,6 @@
 extends Area2D
 
-signal level_up1
+signal level_up2
 
 onready var anim = $AnimationPlayer
 onready var currentPiece = $"../..".currentPiece
@@ -82,4 +82,4 @@ func level_up_check():
 func _process(delta):
 	level_up_check()
 	if levelUP == true:
-		emit_signal("level_up1")
+		emit_signal("level_up2")
