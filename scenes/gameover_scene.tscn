@@ -1,0 +1,172 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/graphics/fonts/yoster-island.regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/graphics/backgrounds/bg1.png" type="Texture" id=2]
+[ext_resource path="res://scripts/gameover_scene.gd" type="Script" id=3]
+[ext_resource path="res://scenes/animations/scenesfade_in.tres" type="Animation" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 158
+outline_size = 2
+outline_color = Color( 0, 1, 0.976471, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+outline_size = 1
+outline_color = Color( 0, 0.976471, 1, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.368627, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "fade_in_gameover"
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fade_out_gameover"
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="gameover_scene" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="overlay" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="overlay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+modulate = Color( 0.121569, 0.121569, 0.121569, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color( 1, 0, 0.72549, 1 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -303.0
+margin_bottom = 303.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -753.5
+margin_top = -180.5
+margin_right = 753.5
+margin_bottom = 180.5
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER GAMER!"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="restart" type="Button" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -420.0
+margin_top = 90.0
+margin_right = -200.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 4 )
+text = "RESTART"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Button" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 200.0
+margin_top = 90.0
+margin_right = 420.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 4 )
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="easyin2" type="AnimationPlayer" parent="."]
+anims/fade_in = ExtResource( 4 )
+anims/fade_in_gameover = SubResource( 7 )
+anims/fade_out = SubResource( 6 )
+anims/fade_out_gameover = SubResource( 8 )
+
+[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]

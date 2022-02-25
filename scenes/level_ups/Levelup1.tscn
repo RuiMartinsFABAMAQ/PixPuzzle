@@ -1,0 +1,202 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/graphics/level_clear_gamers/bruno_ferreira.jpeg" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/backgrounds/bg1.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/fonts/yoster-island.regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/levelups/Levelup1.gd" type="Script" id=4]
+[ext_resource path="res://assets/graphics/pictures/light.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/backgrounds/bg3.png" type="Texture" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=10]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 3
+
+[sub_resource type="DynamicFont" id=2]
+size = 158
+outline_size = 2
+outline_color = Color( 0.87451, 0, 1, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+outline_size = 3
+outline_color = Color( 0.521569, 0, 1, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.368627, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "fade_in_gameover"
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "fade_out_gameover"
+tracks/0/type = "value"
+tracks/0/path = NodePath("overlay/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="Levelup1" type="CanvasLayer"]
+script = ExtResource( 4 )
+
+[node name="overlay" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="overlay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+modulate = Color( 0.121569, 0.121569, 0.121569, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color( 0, 0.670588, 1, 1 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -303.0
+margin_bottom = 303.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+flip_h = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer"]
+material = SubResource( 10 )
+margin_left = 626.0
+margin_top = 157.0
+margin_right = 1321.0
+margin_bottom = 869.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+material = SubResource( 1 )
+margin_left = 510.0
+margin_top = 243.0
+margin_right = 1410.0
+margin_bottom = 843.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -750.0
+margin_top = -480.0
+margin_right = 750.0
+margin_bottom = -119.0
+custom_fonts/font = SubResource( 2 )
+text = "LEVEL UP GAMER!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = 130.0
+margin_right = 110.0
+margin_bottom = 221.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="easyin" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 6 )
+anims/fade_in_gameover = SubResource( 7 )
+anims/fade_out = SubResource( 8 )
+anims/fade_out_gameover = SubResource( 9 )
+
+[connection signal="pressed" from="CanvasLayer/start" to="." method="_on_start_pressed"]
