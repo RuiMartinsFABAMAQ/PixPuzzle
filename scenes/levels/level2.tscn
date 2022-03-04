@@ -332,7 +332,6 @@ color = Color( 0.905882, 0.952941, 0.866667, 0.788235 )
 position = Vector2( 750, 300 )
 
 [node name="TimeBar" parent="background/Time_bar" index="2"]
-default_color = Color( 0.752941, 0.956863, 0.392157, 1 )
 velocity = 8.9
 
 [node name="Ui" type="Control" parent="background"]
