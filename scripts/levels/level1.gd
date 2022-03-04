@@ -10,8 +10,8 @@ func _ready():
 	anim.play("fade_out")
 	var timeout = get_tree().get_root().find_node("Time_bar",true,false)
 	timeout.connect("game_over",self,"game_over_func")
-	var level_up1 = get_tree().get_root().find_node("cell",true,false)
-	level_up1.connect("level_up1",self,"level1")
+	var level_up = get_tree().get_root().find_node("cell1",true,false)
+	level_up.connect("level_up1",self,"level1")
 	
 func game_over_func():
 	anim.play("fade_in")
