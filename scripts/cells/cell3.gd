@@ -46,7 +46,7 @@ func _input(event) -> void:
 	if event.is_action_released("click"):
 		_dragging = false
 		emptycell()
-		
+		$drop.play()
 	if event is InputEventMouseMotion:
 		position -= _touch_position - (event.position)
 		_touch_position = event.position
@@ -54,7 +54,7 @@ func _input(event) -> void:
 func _on_cell_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
 		if _is_on_top():
-			$bt_click.play()
+			$pick.play()
 			_dragging = true
 			_touch_position = event.position
 			checkin()

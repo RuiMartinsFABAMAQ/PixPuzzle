@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var anim = ["bird", "crown", "thunder", "eyes", "star"]
+onready var anim = ["bird", "crown", "thunder", "eyes", "star", "winer"]
 export var i = 0
 export var flip = false
 export var grau = 0 

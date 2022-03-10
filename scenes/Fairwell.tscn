@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/graphics/backgrounds/bg1.png" type="Texture" id=1]
 [ext_resource path="res://assets/graphics/fonts/yoster-island.regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scenes/header_title.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Fairwell.gd" type="Script" id=4]
+[ext_resource path="res://scenes/level_ups/level_up_anim.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 157
@@ -79,6 +80,7 @@ script = ExtResource( 4 )
 layer = 10
 
 [node name="ColorRect" type="ColorRect" parent="overlay"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -86,6 +88,12 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 780, 550 )
+scale = Vector2( 1.2, 1.2 )
+z_index = 1
+i = 5
 
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0

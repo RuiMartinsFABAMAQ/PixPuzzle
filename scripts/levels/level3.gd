@@ -8,6 +8,7 @@ func _unhandled_input(event):
 
 func _ready():
 	anim.play("fade_out")
+	$AudioStreamPlayer.play()
 	var timeout = get_tree().get_root().find_node("Time_bar",true,false)
 	timeout.connect("game_over",self,"game_over_func")
 	var level_up = get_tree().get_root().find_node("cell3",true,false)
